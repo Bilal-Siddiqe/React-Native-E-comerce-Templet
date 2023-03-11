@@ -1,29 +1,11 @@
 import React from 'react'
-import { Image, ScrollView, SafeAreaView, StyleSheet, StatusBar } from "react-native";
+import { Image, ScrollView, View } from "react-native";
 import { NativeBaseProvider, Text, Box, Flex, Input, AspectRatio, Center, Stack, Heading, HStack } from "native-base";
-import HomeCards from './HomeCards';
+import { ProductCards } from './ProductCards';
+import product from './ProductDetail';
 
 
 const Home = () => {
-    const product =
-        [
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-            "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg",
-        ];
-
-
-
     return (
         <NativeBaseProvider>
             <Box bg="white" p="2" pl="8" pt="3">
@@ -39,45 +21,53 @@ const Home = () => {
                 <Input mx="3" placeholder="Input" />
             </Box>
 
-            <Box bg="white" p="2">
-                <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>Top Categoreis</Text>
-                <Box bg="white" p="2">
-                    <Flex direction="row" alignItems="center" justifyContent="center" >
-                        <Image source={{ uri: 'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
-                            style={{ width: 50, height: 60, marginHorizontal: 15 }} />
-                        <Image source={{ uri: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
-                            style={{ width: 50, height: 60, marginHorizontal: 15 }} />
-                        <Image source={{ uri: 'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
-                            style={{ width: 50, height: 60, marginHorizontal: 15 }} />
-                        <Image source={{ uri: 'https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
-                            style={{ width: 50, height: 60, marginHorizontal: 15 }} />
+            <ScrollView>
+                <ScrollView horizontal={true}>
+                    <Box bg="white" p="2">
+                        <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>Top Categoreis</Text>
+                        <Box bg="white" p="2">
+                            <Flex direction="row" alignItems="center" justifyContent="center" >
+                                {product.map((elements) => {
+                                    return (
+                                        <Image source={{ uri:`${elements}` }}
+                                            style={{ width: 50, height: 60, marginHorizontal: 15 }} />
+                                    )
+                                })}
+                            </Flex>
+                        </Box>
+                    </Box>
+                </ScrollView>
+
+                <ScrollView horizontal={true}>
+                    <Box bg="white" p="2">
+                        <Flex direction="row" alignItems="center" justifyContent="center" >
+                            {product.map((elements) => {
+                                return (
+                                    < Image source={{ uri: `${elements}` }}
+                                        style={{ width: 320, height: 150, borderRadius: 8, marginHorizontal: 10 }} />
+                                )
+                            })}
+
+                        </Flex>
+                    </Box>
+                </ScrollView>
+
+
+                <Box bg="white">
+                    <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>New Products</Text>
+                    <Flex flexDirection='row' alignItems='center' justifyContent='center' flexWrap='wrap' p='1'>
+                        {product.map((elements, index) => {
+                            return (
+                                <>
+                                    <ProductCards url={elements} />
+                                </>
+                            )
+                        })}
                     </Flex>
                 </Box>
-            </Box>
+            </ScrollView>
 
-            <Box bg="white" p="2">
-                <Flex direction="row" alignItems="center" justifyContent="center" >
-                    <Image source={{ uri: 'https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=600' }}
-                        style={{ width: 300, height: 150, borderRadius: 8 }} />
-                </Flex>
-            </Box>
-
-            <Box bg="white" p="2">
-                <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>New Products</Text>
-
-                {product.map((elements, index) => {
-                    return (
-                        <Flex direction="row" alignItems="center" justifyContent="center" p="2" flexWrap="wrap">
-                            <HomeCards url={elements} key={index} />
-                        </Flex>
-                    )
-                })}
-
-
-            </Box>
         </NativeBaseProvider >
-
-
     )
 }
 

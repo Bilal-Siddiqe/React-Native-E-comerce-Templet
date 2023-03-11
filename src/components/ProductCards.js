@@ -1,14 +1,12 @@
-import React from 'react';
-import { View, Text, Image } from 'react-native';
-import { NativeBaseProvider, Box, AspectRatio, Center, Stack, Heading } from "native-base";
+import { Image, ScrollView, View } from "react-native";
+import { NativeBaseProvider, Text, Box, Flex, Input, AspectRatio, Center, Stack, Heading, HStack } from "native-base";
+import React from 'react'
 
-
-const HomeCards = (props) => {
-    
+const ProductCards = (props) => {
     return (
-        <NativeBaseProvider>
-            <Box alignItems="center" style={{ color: "black" }}>
-                <Box maxW="40" rounded="lg"  borderColor="coolGray.200" mx="2" borderWidth="1" _dark={{
+        <>
+            <Box alignItems="center" style={{ color: "black", marginTop:20}}>
+                <Box maxW="40" rounded="lg" borderColor="coolGray.200" mx="2" borderWidth="1" _dark={{
                     borderColor: "coolGray.600",
                     backgroundColor: "gray.700"
                 }} _web={{
@@ -54,8 +52,8 @@ const HomeCards = (props) => {
                     </Stack>
                 </Box>
             </Box>
-        </NativeBaseProvider >
+        </>
     )
 }
 
-export default HomeCards
+export  {ProductCards};
