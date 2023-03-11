@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "./src/components/Home";
 
-
 function App() {
   return (
     <>
@@ -9,7 +8,5 @@ function App() {
     </>
   );
 }
-
-
 
 export default App;
