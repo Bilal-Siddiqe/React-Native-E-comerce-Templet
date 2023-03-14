@@ -56,7 +56,4 @@ const ProductCards = (props) => {
     )
 }
 
-
-
-
 export  {ProductCards};
