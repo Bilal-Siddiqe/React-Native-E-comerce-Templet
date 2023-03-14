@@ -9,9 +9,10 @@ import Trending from "./src/screens/Trending";
 function App() {
   return (
     <>
-    {/* <Home/> */}
+
+    <Home/>
     {/* <Categories/> */}
-    <Trending/>
+    {/* <Trending/> */}
 
     </>
   );
