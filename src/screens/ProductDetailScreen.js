@@ -5,14 +5,17 @@ import { SliderBox } from "react-native-image-slider-box";
 
 const ProductDetailScreen = () => {
 
-    
+    const images = [
+        require('../assets/Shoes1.png'),
+        require('../assets/Shoes1.png'),
+        require('../assets/Shoes1.png'),
+        require('../assets/Shoes1.png'),
+    ]
+
     return (
         <NativeBaseProvider>
             <Box bg="white">
-                <Text style={{color:'black'}}>ProductDetailScreen</Text>
-                <Flex alignItems="center" p="0" >
-                    <Image source={require('../assets/Shoes1.png')} />
-                </Flex>
+                <SliderBox images={images} dotColor="red" />
             </Box>
         </NativeBaseProvider>
     )

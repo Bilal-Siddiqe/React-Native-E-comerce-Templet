@@ -7,12 +7,10 @@ import Trending from "./src/screens/Trending";
 function App() {
   return (
     <>
-
-    {/* <Home/> */}
-    {/* <Categories/> */}
-    {/* <Trending/> */}
-    <ProductDetailScreen/>
-
+      {/* <Home/> */}
+      {/* <Categories/> */}
+      {/* <Trending/> */}
+      <ProductDetailScreen />
     </>
   );
 }
