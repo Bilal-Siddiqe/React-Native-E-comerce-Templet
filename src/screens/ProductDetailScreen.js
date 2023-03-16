@@ -72,9 +72,8 @@ const ProductDetailScreen = () => {
                     {/* This is horizaontal Line */}
                     <View style={{ borderTopWidth: 0.2, borderTopColor: "black", marginVertical: 20, marginRight: 5 }}></View>
 
-
                     <Flex flexDirection="row" alignItems="center" justifyContent="space-around">
-                        <Text style={{ color: "black" }}>Available Sizes :</Text>
+                        <Text style={{ color: "black",marginLeft:-8 }}>Available Sizes :</Text>
                         <View style={{ height: 20, width: 35, backgroundColor: "#dcdcdc", borderRadius: 5, padding: 1 }}>
                             <Text style={{ color: "black", textAlign: "center" }}> 6 </Text>
                         </View>
@@ -90,13 +89,23 @@ const ProductDetailScreen = () => {
                     </Flex>
 
                     <Box>
-                        <Text style={{ color: "black", paddingTop: 25, fontWeight: "bold", fontSize: 15 }}>
+                        <Text style={{ color: "black", paddingTop: 16, fontWeight: "bold", fontSize: 15 }}>
                             Description
                         </Text>
-                        <Text style={{ color: "black",fontWeight: "300", fontSize:13, paddingVertical:3 }}>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi excepturi soluta sapiente accusantium doloribus dicta reiciendis libero nihil dolorem fuga natus cum dolor consequatur officiis aliquid, dolorum ab voluptates? voluptatum architecto aspernatur odio labore sit reiciendis vel deserunt, sapiente, assumenda mollitia, minus debitis accusamus veniam libero in numquam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi excepturi soluta sapiente accusantium doloribus dicta reiciendis libero nihil dolorem fuga natus cum dolor consequatur officiis aliquid, dolorum ab voluptates?
+                        <Text style={{ color: "black", fontWeight: "300", fontSize: 13, paddingVertical: 3, overflow:"hidden" }}>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi excepturi soluta sapiente accusantium doloribus dicta reiciendis libero nihil dolorem fuga natus cum dolor consequatur officiis aliquid, dolorum ab voluptates? voluptatum architecto aspernatur odio labore sit reiciendis vel deserunt, sapiente, assumenda mollitia, minus debitis accusamus veniam libero in numquam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi excepturi soluta sapiente libero in numquam!
+                            
                         </Text>
                     </Box>
+
+                    <Flex flexDirection="row" alignItems="center" justifyContent="space-between">
+                        <View style={{ height: 30, width: 250, backgroundColor: "blue", borderRadius: 5, marginVertical:2}}>
+                            <Text style={{ color: "white", textAlign:"center", paddingVertical:5}}> Add to cart </Text>
+                        </View>
+                        <Text style={{ color: "black", fontSize:16}}> 1 </Text>
+                        <Text style={{ color: "green" }}> icon </Text>
+                    </Flex>
+
 
 
                 </Box>
