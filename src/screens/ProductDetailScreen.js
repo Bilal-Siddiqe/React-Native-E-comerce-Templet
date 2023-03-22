@@ -106,8 +106,6 @@ const ProductDetailScreen = () => {
                         <Text style={{ color: "green" }}> icon </Text>
                     </Flex>
 
-
-
                 </Box>
 
             </Box>
