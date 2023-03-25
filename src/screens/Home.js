@@ -1,5 +1,5 @@
 import React from 'react'
-import { } from "react-native";
+import { Box } from "react-native";
 import { NativeBaseProvider} from "native-base";
 import HomNav from '../Components/HomeScreen/HomNav';
 import HomeBody from '../Components/HomeScreen/HomeBody';
