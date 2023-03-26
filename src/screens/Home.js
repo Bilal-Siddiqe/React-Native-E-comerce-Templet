@@ -6,11 +6,11 @@ import HomeBody from '../Components/HomeScreen/HomeBody';
 import Footer from '../Components/Footer';
 
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
         <NativeBaseProvider >
             <HomNav />
-            <HomeBody />
+            <HomeBody nvg = {() => { navigation.navigate('Categories') }}/>
             <Footer/>
         </NativeBaseProvider >
     )
