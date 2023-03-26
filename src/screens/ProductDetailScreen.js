@@ -41,7 +41,7 @@ const ProductDetailScreen = () => {
                         <View style={{ height: 25, width: 30, backgroundColor: "blue", borderRadius: 5 }}></View>
                         <View style={{ height: 25, width: 30, backgroundColor: "green", borderRadius: 5 }}></View>
                         <View style={{ height: 25, width: 30, backgroundColor: "purple", borderRadius: 5 }}></View>
-                        <Text style={{ color: "black", fontSize: 16, marginRight: 40, marginLeft: -5 }}> > </Text>
+                        <Text style={{ color: "black", fontSize: 16, marginRight: 40, marginLeft: -5 }}> {">"} </Text>
                         <Text style={{ color: "green" }}> icon </Text>
                     </Flex>
 
