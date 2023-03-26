@@ -4,7 +4,7 @@ import React from 'react'
 import Footer from '../components/Footer';
 
 
-const CheakoutScreen = () => {
+const CheakoutScreen = ({ navigation }) => {
     return (
         <NativeBaseProvider>
             <Box bg="white" height={720} paddingx="10" paddingY="1" color={"black"}>
@@ -72,7 +72,7 @@ const CheakoutScreen = () => {
                     <Text style={{ color: "purple", fontWeight: "bold", fontSize: 18, marginLeft: -80 }}>$2050</Text>
                     <Button
                         title="Proceed to Pay"
-                        onPress={() => { }}
+                        onPress={() => { navigation.navigate('OrderScreen') }}
                         color="#841584"
 
                     />

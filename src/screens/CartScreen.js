@@ -4,7 +4,7 @@ import React from 'react'
 import Footer from '../components/Footer';
 
 
-const CartScreen = () => {
+const CartScreen = ({ navigation }) => {
     return (
         <NativeBaseProvider>
 
@@ -65,7 +65,7 @@ const CartScreen = () => {
                 <Flex justifyContent="center" alignItems="center" marginBottom={210}>
                     <View style={{ height: 40, width: 320, backgroundColor: "purple", borderRadius: 5, marginVertical: 2 }}>
                         <Flex justifyContent="center" alignItems="center">
-                            <Text style={{ color: "white", textAlign: "center", paddingVertical: 5 }}> Cheakout </Text>
+                            <Text onPress={() => { navigation.navigate('CheakoutScreen') }} style={{ color: "white", textAlign: "center", paddingVertical: 5 }}> Cheakout </Text>
                         </Flex>
                     </View>
                 </Flex>
