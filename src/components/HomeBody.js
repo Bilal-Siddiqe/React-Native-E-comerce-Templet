@@ -4,7 +4,7 @@ import { Text, Box, Flex } from "native-base";
 import { product } from './ProductDetail';
 import { ProductCards } from './ProductCards';
 
-const HomeBody = () => {
+const HomeBody = (props) => {
     return (
         <>
             <ScrollView>
@@ -52,7 +52,7 @@ const HomeBody = () => {
                         {product.map((elements, index) => {
                             return (
                                 <>
-                                    <ProductCards url={elements} />
+                                    <ProductCards url={elements} navg={props.nvg} />
                                 </>
                             )
                         })}

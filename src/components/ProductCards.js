@@ -5,7 +5,7 @@ import React from 'react'
 const ProductCards = (props) => {
     return (
         <>
-            <Box alignItems="center" style={{ color: "black", marginTop:20}}>
+            <Box alignItems="center" style={{ color: "black", marginTop: 20 }}>
                 <Box maxW="40" rounded="lg" borderColor="coolGray.200" mx="2" borderWidth="1" _dark={{
                     borderColor: "coolGray.600",
                     backgroundColor: "gray.700"
@@ -33,7 +33,7 @@ const ProductCards = (props) => {
                     </Box>
                     <Stack p="4" space={2}>
                         <Stack space={2}>
-                            <Heading size="md" ml="-1">
+                            <Heading size="md" ml="-1" onPress={props.navg}>
                                 Joger
                             </Heading>
                             <Text fontSize="xs" _light={{
@@ -56,4 +56,4 @@ const ProductCards = (props) => {
     )
 }
 
-export  {ProductCards};
+export { ProductCards };

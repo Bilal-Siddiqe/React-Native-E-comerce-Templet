@@ -98,7 +98,7 @@ const ProductDetailScreen = ({ navigation }) => {
                     <Flex flexDirection="row" alignItems="center" justifyContent="space-between">
                         <View style={{ height: 20, width: 250, backgroundColor: "blue", borderRadius: 5, marginVertical: 2 }}>
                             <Button
-                                onPress={() => { navigation.navigate('CartScreen') }}
+                                onPress={()=> { navigation.navigate('CartScreen') }}
                                 title="Add to Cart"
                                 color="#841584"
                                 accessibilityLabel="Learn more about this purple button"

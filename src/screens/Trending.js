@@ -6,19 +6,19 @@ import { ProductCards } from '../components/ProductCards';
 import Footer from '../components/Footer';
 
 
-const Trending = () => {
+const Trending = ({ navigation }) => {
     return (
         <NativeBaseProvider >
 
             <Text style={{ backgroundColor: "white", color: "black", paddingLeft: 25, paddingTop: 20, fontWeight: "bold", fontSize: 18, paddingBottom: 10 }}>Trending</Text>
-           
+
             <ScrollView>
-                <Box bg="white">
+                <Box bg="white" >
                     <Flex flexDirection='row' alignItems='center' justifyContent='center' flexWrap='wrap' p='1'>
                         {product.map((elements, index) => {
                             return (
-                                <> 
-                                    <ProductCards url={elements} /> 
+                                <>
+                                    <ProductCards url={elements} navg={ () => {navigation.navigate('ProductDetailScreen') }} />
                                 </>
                             )
                         })}
@@ -26,7 +26,7 @@ const Trending = () => {
                 </Box>
             </ScrollView>
 
-          <Footer/>
+            <Footer />
 
         </NativeBaseProvider >
     )

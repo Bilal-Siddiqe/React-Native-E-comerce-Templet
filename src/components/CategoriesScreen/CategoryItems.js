@@ -4,7 +4,7 @@ import { Box, Flex } from "native-base";
 import { product } from '../ProductImages'
 
 
-const CategoryItems = () => {
+const CategoryItems = (props) => {
     return (
             <Box bg="white">
                 <ScrollView>
@@ -20,8 +20,8 @@ const CategoryItems = () => {
                                         borderRadius: 5,
                                         margin: 5
                                     }}>
-                                        <Image source={{ uri: `${elements}` }} style={{ width: "90%", height: "90%", borderRadius: 5 }} />
-                                        <Text style={{ color: "black", textAlign: "center", fontWeight: "bold", margin: 4 }}>Cloths</Text>
+                                        <Image source={{ uri: `${elements}` }} style={{ width: "90%", height: "90%", borderRadius: 5 }}/>
+                                        <Text onPress={props.navg} style={{ color: "black", textAlign: "center", fontWeight: "bold", margin: 4 }}>Cloths</Text>
                                     </Flex>
                                 )
                             })}
