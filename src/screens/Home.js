@@ -8,7 +8,8 @@ const Home = ({ navigation }) => {
     return (
         <NativeBaseProvider >
             <HomNav />
-            <HomeBody nvg={() => { navigation.navigate('ProductDetailScreen') }} />
+            {/* <HomeBody nvg={() => { navigation.navigate('ProductDetailScreen') }} /> */}
+            <HomeBody/>
             {/* <Footer /> */}
         </NativeBaseProvider >
     )

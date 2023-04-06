@@ -19,7 +19,7 @@ const ProductCards = (props) => {
                         <AspectRatio w="100%" ratio={8 / 6}>
                             <Image source={{
                                 uri: `${props.url}`
-                            }} alt="image"/>
+                            }} alt="image" borderRadius={3}/>
                         </AspectRatio>
                         <Center bg="violet.500" _dark={{
                             bg: "violet.400"
@@ -27,7 +27,7 @@ const ProductCards = (props) => {
                             color: "warmGray.50",
                             fontWeight: "700",
                             fontSize: 8
-                        }} position="absolute" bottom="0" px="1" py="1" >
+                        }} position="absolute" top="0" px="1" py="1" >
                             PHOTOS
                         </Center>
                     </Box>

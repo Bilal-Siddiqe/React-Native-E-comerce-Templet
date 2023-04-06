@@ -11,9 +11,8 @@ const HomeBody = (props) => {
 
                 {/* Top Categories Section */}
                 <Box bg="white" p="2">
-
                     <Flex flexDirection={"row"} justifyContent={"space-between"}>
-                        <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>Top Categoreis</Text>
+                        <Text ml="2" style={{ fontWeight: "bold", fontSize: 18 }}>Top Categoreis</Text>
                         <Text ml="2" style={{ fontSize: 14, color: "purple", marginRight: 3 }}>VIEW ALL</Text>
                     </Flex>
 
@@ -25,7 +24,7 @@ const HomeBody = (props) => {
                                         <>
                                             <Flex flexDirection='column' alignItems="center" justifyContent="center" >
                                                 <Image source={{ uri: `${elements}` }}
-                                                    style={{ width: 55, height: 60, marginHorizontal: 4, borderWidth: 0.1, borderColor: "black", borderRadius: 3 }} />
+                                                    style={{ width: 55, height: 55, marginHorizontal: 4, borderWidth: 0.15, borderColor: "black", borderRadius: 4 }} />
                                                 <Text style={{ fontSize: 12, marginTop:-3, fontWeight:"bold"}}>Shoes</Text>
                                             </Flex>
                                         </>
@@ -43,7 +42,7 @@ const HomeBody = (props) => {
                             {BannerProduct.map((elements) => {
                                 return (
                                     < Image source={{ uri: `${elements}` }}
-                                        style={{ width: 320, height: 150, borderRadius: 8, marginHorizontal: 10 }} />
+                                        style={{ width: 310, height: 150, borderRadius: 8, marginHorizontal: 10 }} />
                                 )
                             })}
 
@@ -54,7 +53,7 @@ const HomeBody = (props) => {
                 {/* New Producs Section */}
                 <Box bg="white">
                     <Flex flexDirection={"row"} justifyContent={"space-between"} mt="4">
-                        <Text ml="4" style={{ fontWeight: "bold", fontSize: 16 }}>New Products</Text>
+                        <Text ml="4" style={{ fontWeight: "bold", fontSize: 18 }}>New Products</Text>
                         <Text ml="2" style={{ fontSize: 14, color: "purple", marginRight: 10 }}>VIEW ALL</Text>
                     </Flex>
                     <Flex flexDirection='row' alignItems='center' justifyContent='center' flexWrap='wrap' p='1'>
@@ -71,7 +70,7 @@ const HomeBody = (props) => {
                 {/* Trending Section */}
                 <ScrollView>
                     <Flex flexDirection={"row"} justifyContent={"space-between"} bg="white" pt="5">
-                        <Text ml="3" style={{ fontWeight: "bold", fontSize: 16 }}>Top Categoreis</Text>
+                        <Text ml="3" style={{ fontWeight: "bold", fontSize: 18 }}>Trending</Text>
                         <Text ml="2" style={{ fontSize: 14, color: "purple", marginRight: 10 }}>VIEW ALL</Text>
                     </Flex>
                     <Box bg="white" pt="1">
