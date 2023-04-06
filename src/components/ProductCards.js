@@ -6,7 +6,7 @@ import Icon from "react-native-vector-icons/FontAwesome"
 const ProductCards = (props) => {
     return (
         <>
-            <Box alignItems="center" style={{ color: "black", marginTop: 20 }}>
+            <Box alignItems="center" style={{ color: "black", marginTop: 10 }}>
 
                 {/* This is card */}
                 <Box maxW="40" rounded="lg" borderColor="coolGray.200" mx="2" borderWidth="1" _dark={{
@@ -52,10 +52,6 @@ const ProductCards = (props) => {
                     {/* Card Product Name Description & Pricing */}
                     <Stack p="4" space={2}>
                         <Stack space={2}>
-                            <Heading size="md" ml="-1" onPress={props.navg}>
-                                Joger
-                            </Heading>
-
                             <Flex flexDirection={"row"}>
                                 <Icon name="star" size={15} color={"orange"} />
                                 <Icon name="star" size={15} color={"orange"} />
@@ -63,7 +59,6 @@ const ProductCards = (props) => {
                                 <Icon name="star" size={15} color={"orange"} />
                                 <Icon name="star-half-full" size={15} color={"orange"} />
                             </Flex>
-
 
                             <Text fontSize="xs" _light={{
                                 color: "violet.500"
