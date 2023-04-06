@@ -19,7 +19,7 @@ const Footer = () => {
 
       <Box bg="white">
         <Flex justifyContent={"center"} alignItems='center' mb={-4}>
-          <Box justifyContent={"center"} alignItems='center' pt="1" borderColor={"red"} borderRadius={100} w={10} h={10} bg={"gray.100"}>
+          <Box justifyContent={"center"} alignItems='center' pt="1" borderColor={"red"} borderRadius={100} w={12} h={12} bg={"gray.100"}>
             <TouchableOpacity onPress={() => { }}>
               <Icon name="cart-plus" size={iconSizeCart} color={iconClrCart} />
             </TouchableOpacity>
