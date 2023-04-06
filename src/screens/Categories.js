@@ -2,7 +2,7 @@ import { Text, ScrollView } from 'react-native'
 import { NativeBaseProvider } from "native-base";
 import React from 'react'
 import Footer from '../components/Footer';
-import CategoryItems from '../components/CategoriesScreen/CategoryItems';
+import CategoryItems from '../components/CategoryItems';
 
 
 

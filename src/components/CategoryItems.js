@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, Image, ScrollView } from 'react-native'
 import { Box, Flex } from "native-base";
-import {product} from "../ProductDetail";
+import {product} from "./ProductDetail";
 
 const CategoryItems = (props) => {
     return (
