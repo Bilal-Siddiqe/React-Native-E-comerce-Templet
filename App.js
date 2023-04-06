@@ -37,3 +37,10 @@ function App() {
   );
 }
 export default App;
+
+
+
+// import Icon from "react-native-vector-icons/FontAwesome"
+// <TouchableOpacity onPress={() => { }}>
+//     <Icon name="heart-o" size={20} color={"red"} />
+// </TouchableOpacity>
