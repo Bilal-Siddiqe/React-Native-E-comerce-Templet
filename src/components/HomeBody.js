@@ -25,8 +25,8 @@ const HomeBody = (props) => {
                                         <>
                                             <Flex flexDirection='column' alignItems="center" justifyContent="center" >
                                                 <Image source={{ uri: `${elements}` }}
-                                                    style={{ width: 55, height: 60, marginHorizontal: 3, borderWidth: 0.05, borderColor: "black", borderRadius: 3 }} />
-                                                <Text style={{ fontSize: 12 }}>Shoe</Text>
+                                                    style={{ width: 55, height: 60, marginHorizontal: 4, borderWidth: 0.1, borderColor: "black", borderRadius: 3 }} />
+                                                <Text style={{ fontSize: 12, marginTop:-3, fontWeight:"bold"}}>Shoes</Text>
                                             </Flex>
                                         </>
                                     )

@@ -9,7 +9,7 @@ const Home = ({ navigation }) => {
         <NativeBaseProvider >
             <HomNav />
             <HomeBody nvg={() => { navigation.navigate('ProductDetailScreen') }} />
-            <Footer />
+            {/* <Footer /> */}
         </NativeBaseProvider >
     )
 }
