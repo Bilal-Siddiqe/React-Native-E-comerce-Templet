@@ -27,7 +27,6 @@ const ProductCards = (props) => {
                             }} alt="image" borderRadius={3} />
                         </AspectRatio>
 
-
                         {/* Tags on Card Image */}
                         <Center bg="blueGray.300" _dark={{
                             bg: "violet.400"
@@ -46,9 +45,8 @@ const ProductCards = (props) => {
                             fontWeight: "700",
                             fontSize: 8
                         }} position="absolute" top="2" right="2" px="1" py="1" borderRadius={100} w={5} h={5}>
-                            H
+                            <Icon name="heart" size={10} color={"white"} />
                         </Center>
-
                     </Box>
 
                     {/* Card Product Name Description & Pricing */}
