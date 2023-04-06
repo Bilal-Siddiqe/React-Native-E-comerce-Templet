@@ -1,12 +1,5 @@
 import React from "react";
 import Home from "./src/screens/Home";
-import CartScreen from "./src/screens/CartScreen";
-import Categories from "./src/screens/Categories";
-import CheakoutScreen from "./src/screens/CheakoutScreen";
-import OrderScreen from "./src/screens/OrderScreen";
-import ProductDetailScreen from "./src/screens/ProductDetailScreen";
-import ProfileScreen from "./src/screens/ProfileScreen";
-import { View, Image, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 

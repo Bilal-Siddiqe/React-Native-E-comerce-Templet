@@ -16,10 +16,10 @@ const HomNav = () => {
                 </Flex>
             </Box>
             <Box bg="white" p="2">
-                <Input mx="3" placeholder="Search what you want" />
+                <Input mx="3" placeholder="Search Products" />
             </Box>
         </>
-    )
+    )       
 }
 
 export default HomNav
