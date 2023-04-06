@@ -6,7 +6,6 @@ import CheakoutScreen from "./src/screens/CheakoutScreen";
 import OrderScreen from "./src/screens/OrderScreen";
 import ProductDetailScreen from "./src/screens/ProductDetailScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
-import Trending from "./src/screens/Trending";
 import { View, Image, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -21,8 +20,6 @@ function App() {
           <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
 
           {/* <Stack.Screen name="Categories" component={Categories} options={{ headerShown: false }} />
-
-          <Stack.Screen name="Trending" component={Trending} options={{ headerShown: false }} />
 
           <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} options={{ headerShown: false }} />
 
