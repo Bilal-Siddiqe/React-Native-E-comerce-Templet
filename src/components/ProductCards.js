@@ -1,12 +1,13 @@
 import { Image, ScrollView, View } from "react-native";
 import { NativeBaseProvider, Text, Box, Flex, Input, AspectRatio, Center, Stack, Heading, HStack } from "native-base";
 import React from 'react'
+import Icon from "react-native-vector-icons/FontAwesome"
 
 const ProductCards = (props) => {
     return (
         <>
             <Box alignItems="center" style={{ color: "black", marginTop: 20 }}>
-                
+
                 {/* This is card */}
                 <Box maxW="40" rounded="lg" borderColor="coolGray.200" mx="2" borderWidth="1" _dark={{
                     borderColor: "coolGray.600",
@@ -56,6 +57,16 @@ const ProductCards = (props) => {
                             <Heading size="md" ml="-1" onPress={props.navg}>
                                 Joger
                             </Heading>
+
+                            <Flex flexDirection={"row"}>
+                                <Icon name="star" size={15} color={"orange"} />
+                                <Icon name="star" size={15} color={"orange"} />
+                                <Icon name="star" size={15} color={"orange"} />
+                                <Icon name="star" size={15} color={"orange"} />
+                                <Icon name="star-half-full" size={15} color={"orange"} />
+                            </Flex>
+
+
                             <Text fontSize="xs" _light={{
                                 color: "violet.500"
                             }} _dark={{
