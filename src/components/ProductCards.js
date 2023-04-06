@@ -6,6 +6,8 @@ const ProductCards = (props) => {
     return (
         <>
             <Box alignItems="center" style={{ color: "black", marginTop: 20 }}>
+                
+                {/* This is card */}
                 <Box maxW="40" rounded="lg" borderColor="coolGray.200" mx="2" borderWidth="1" _dark={{
                     borderColor: "coolGray.600",
                     backgroundColor: "gray.700"
@@ -15,22 +17,40 @@ const ProductCards = (props) => {
                 }} _light={{
                     backgroundColor: "gray.50"
                 }}>
+
                     <Box>
+                        {/* Image of Card */}
                         <AspectRatio w="100%" ratio={8 / 6}>
                             <Image source={{
                                 uri: `${props.url}`
-                            }} alt="image" borderRadius={3}/>
+                            }} alt="image" borderRadius={3} />
                         </AspectRatio>
-                        <Center bg="violet.500" _dark={{
+
+
+                        {/* Tags on Card Image */}
+                        <Center bg="blueGray.300" _dark={{
+                            bg: "violet.400"
+                        }} _text={{
+                            color: "black",
+                            fontWeight: "700",
+                            fontSize: 10
+                        }} position="absolute" top="2" left="2" px="2" py="1" borderRadius={5} >
+                            New
+                        </Center>
+
+                        <Center bg="darkBlue.300" _dark={{
                             bg: "violet.400"
                         }} _text={{
                             color: "warmGray.50",
                             fontWeight: "700",
                             fontSize: 8
-                        }} position="absolute" top="0" px="1" py="1" >
-                            PHOTOS
+                        }} position="absolute" top="2" right="2" px="1" py="1" borderRadius={100} w={5} h={5}>
+                            H
                         </Center>
+
                     </Box>
+
+                    {/* Card Product Name Description & Pricing */}
                     <Stack p="4" space={2}>
                         <Stack space={2}>
                             <Heading size="md" ml="-1" onPress={props.navg}>
@@ -50,7 +70,9 @@ const ProductCards = (props) => {
                             </View>
                         </Stack>
                     </Stack>
+
                 </Box>
+
             </Box>
         </>
     )
