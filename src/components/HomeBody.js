@@ -9,9 +9,15 @@ const HomeBody = (props) => {
         <>
             <ScrollView>
 
+                {/* Top Categories Section */}
                 <Box bg="white" p="2">
-                    <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>Top Categoreis</Text>
-                    <Box bg="white" p="2">
+
+                    <Flex flexDirection={"row"} justifyContent={"space-between"}>
+                        <Text ml="2" style={{ fontWeight: "bold", fontSize: 16 }}>Top Categoreis</Text>
+                        <Text ml="2" style={{ fontSize: 14, color: "purple", marginRight: 3 }}>VIEW ALL</Text>
+                    </Flex>
+
+                    <Box bg="white" p="2" mt="2">
                         <ScrollView horizontal={true}>
                             <Flex direction="row" alignItems="center" justifyContent="center" >
                                 {product.map((elements) => {
@@ -19,8 +25,8 @@ const HomeBody = (props) => {
                                         <>
                                             <Flex flexDirection='column' alignItems="center" justifyContent="center" >
                                                 <Image source={{ uri: `${elements}` }}
-                                                    style={{ width: 50, height: 60, marginHorizontal: 15 }} />
-                                                <Text>Sneaker</Text>
+                                                    style={{ width: 55, height: 55, marginHorizontal: 3 }} />
+                                                <Text style={{ fontSize: 12 }}>Shoe</Text>
                                             </Flex>
                                         </>
                                     )
@@ -30,7 +36,7 @@ const HomeBody = (props) => {
                     </Box>
                 </Box>
 
-
+                {/* Horizontal Banners Section */}
                 <ScrollView horizontal={true}>
                     <Box bg="white" p="2">
                         <Flex direction="row" alignItems="center" justifyContent="center" >
@@ -45,9 +51,12 @@ const HomeBody = (props) => {
                     </Box>
                 </ScrollView>
 
-
+                {/* New Producs Section */}
                 <Box bg="white">
-                    <Text ml="3" style={{ fontWeight: "bold", fontSize: 16 }}>New Products</Text>
+                    <Flex flexDirection={"row"} justifyContent={"space-between"}>
+                        <Text ml="4" style={{ fontWeight: "bold", fontSize: 16 }}>New Products</Text>
+                        <Text ml="2" style={{ fontSize: 14, color: "purple", marginRight: 10 }}>VIEW ALL</Text>
+                    </Flex>
                     <Flex flexDirection='row' alignItems='center' justifyContent='center' flexWrap='wrap' p='1'>
                         {product.map((elements, index) => {
                             return (
@@ -59,23 +68,24 @@ const HomeBody = (props) => {
                     </Flex>
                 </Box>
 
-                <Text style={{ backgroundColor: "white", color: "black", paddingLeft: 25, paddingTop: 20, fontWeight: "bold", fontSize: 18, paddingBottom: 10 }}>Trending</Text>
+                {/* Trending Section */}
+                <Box>
+                    <Text style={{ backgroundColor: "white", color: "black", paddingLeft: 25, paddingTop: 20, fontWeight: "bold", fontSize: 18, paddingBottom: 10 }}>Trending</Text>
 
-                <ScrollView>
-                    <Box bg="white" >
-                        <Flex flexDirection='row' alignItems='center' justifyContent='center' flexWrap='wrap' p='1'>
-                            {product.map((elements, index) => {
-                                return (
-                                    <>
-                                        <ProductCards url={elements} navg={() => { navigation.navigate('ProductDetailScreen') }} />
-                                    </>
-                                )
-                            })}
-                        </Flex>
-                    </Box>
-                </ScrollView>
-
-
+                    <ScrollView>
+                        <Box bg="white" >
+                            <Flex flexDirection='row' alignItems='center' justifyContent='center' flexWrap='wrap' p='1'>
+                                {product.map((elements, index) => {
+                                    return (
+                                        <>
+                                            <ProductCards url={elements} navg={() => { navigation.navigate('ProductDetailScreen') }} />
+                                        </>
+                                    )
+                                })}
+                            </Flex>
+                        </Box>
+                    </ScrollView>
+                </Box>
 
             </ScrollView>
         </>
