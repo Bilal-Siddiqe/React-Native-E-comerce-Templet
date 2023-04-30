@@ -51,10 +51,6 @@ const ProfileScreen = () => {
 
 
                     </Box>
-
-                    <Box mt={30}>
-                        <Footer />
-                    </Box>
                 </Box>
             </Box>
         </NativeBaseProvider>
